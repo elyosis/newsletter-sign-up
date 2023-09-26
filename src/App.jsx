@@ -1,10 +1,10 @@
-import Card from './components/Card';
 import './App.css';
+import CallToAction from './components/CallToAction';
 
 function App() {
 
   return (
-    <Card />
+    <CallToAction />
   )
 }
 

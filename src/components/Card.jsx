@@ -1,8 +1,7 @@
-import CallToAction from "./CallToAction";
-
-const Card = () => {
+const Card = (props) => {
+  const classes = `card ${props.className}`
   return (
-    <CallToAction />
+    <div className={classes}>{props.children}</div>
   )
 }
 
