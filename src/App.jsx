@@ -1,11 +1,10 @@
-import './App.css'
+import Card from './components/Card';
+import './App.css';
 
 function App() {
 
   return (
-    <p>
-      Hello World
-    </p>
+    <Card />
   )
 }
 
