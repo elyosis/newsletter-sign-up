@@ -1,0 +1,9 @@
+.cta__list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+p {
+  margin: 0;
+}
