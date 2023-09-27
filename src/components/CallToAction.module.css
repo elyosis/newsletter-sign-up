@@ -1,10 +1,8 @@
-.cta__text {
+.sign-up {
   padding: 1rem 1.5rem;
-  line-height: 1.5rem;
-  color: var(--color-neutral-1);
 }
 
-.cta__list-items {
+.sign-up__list-items {
   display: flex;
   flex-direction: column;
   gap: 1rem;

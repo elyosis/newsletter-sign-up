@@ -1,0 +1,11 @@
+.sign-up--success {
+  padding: 9rem 1.5rem 1.5rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign-up__email {
+  font-weight: bold;
+}

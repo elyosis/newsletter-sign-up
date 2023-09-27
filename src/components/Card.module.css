@@ -1,8 +1,11 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  color: var(--color-neutral-1);
+  line-height: 1.5;
 }
 
-.cta {
-  color: blue;
+.card--success {
+  height: 100vh;
 }

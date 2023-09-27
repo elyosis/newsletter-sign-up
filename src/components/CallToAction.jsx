@@ -1,28 +1,28 @@
-import Card from "./Card";
 import Image from "./Image";
 import Heading from "./Heading";
 import ListItem from "./ListItem";
 import CTAForm from "./CTAForm";
 import styles from "./CallToAction.module.css";
 
-const CallToAction = () => {
+const CallToAction = (props) => {
+  const {onSubmit} = props;
   return (
-    <Card>
+    <>
       <Image
         mobileImg="src/assets/images/illustration-sign-up-mobile.svg"
         desktopImg="src/assets/images/illustration-sign-up-desktop.svg"
       />
-      <div className={styles["cta__text"]}>
+      <div className={styles["sign-up"]}>
         <Heading title="Stay updated!" />
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <div className={styles["cta__list-items"]}>
+        <div className={styles["sign-up__list-items"]}>
           <ListItem text="Product discovery and building what matters" />
           <ListItem text="Measuring to ensure updates are a success" />
           <ListItem text="And much more!" />
         </div>
-        <CTAForm />
+        <CTAForm onSubmit={onSubmit} />
       </div>
-    </Card>
+    </>
   );
 };
 
