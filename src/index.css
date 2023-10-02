@@ -37,3 +37,18 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-neutral-2);
+  }
+
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+}

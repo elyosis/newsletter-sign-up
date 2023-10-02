@@ -1,11 +1,32 @@
 .card {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "image"
+    "text";
+  gap: 1rem;
   color: var(--color-neutral-1);
   line-height: 1.5;
 }
 
 .card--success {
   height: 100vh;
+}
+
+@media (min-width: 700px) {
+  .card {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "text image";
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    background-color: var(--color-neutral-4);
+    width: clamp(40rem, 80vw, 57.5rem);
+    aspect-ratio: 16/9;
+    border-radius: 30px;
+    padding: 1.5rem;
+  }
 }
