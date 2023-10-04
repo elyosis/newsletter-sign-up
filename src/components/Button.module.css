@@ -12,7 +12,7 @@
 }
 
 @media (min-width: 700px) and (max-width: 950px) {
-  .button {
+  .button--form {
     padding: 0.3rem;
     margin-block: 0.2rem;
     font-size: clamp(0.8rem, 1.5vw, 1rem);

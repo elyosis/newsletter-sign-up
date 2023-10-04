@@ -6,7 +6,7 @@ const CTAForm = (props) => {
   return (
     <form action="">
       <Input />
-      <Button text="Subscribe to monthly newsletter" onSubmit={onSubmit} />
+      <Button className={"button--form"} text="Subscribe to monthly newsletter" onSubmit={onSubmit} />
     </form>
   );
 };

@@ -2,9 +2,10 @@ import styles from "./Button.module.css";
 
 const Button = (props) => {
   const { text, onSubmit } = props;
+  const classes = `${styles.button} ${styles[`${props.className}`]}`
 
   return (
-    <button className={styles.button} onClick={onSubmit}>
+    <button className={classes} onClick={onSubmit}>
       {text}
     </button>
   );
