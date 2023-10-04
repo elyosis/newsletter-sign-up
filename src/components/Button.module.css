@@ -1,7 +1,7 @@
 .button {
   width: 100%;
   border-radius: 7.5px;
-  background-color: var(--color-neutral-1);
+  background: var(--color-neutral-1);
   color: var(--color-neutral-4);
   padding: 1rem;
   border: none;
@@ -9,6 +9,13 @@
   font-size: 1rem;
   font-weight: bold;
   margin-block: 1rem;
+  transition: all 200ms ease-in;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #FF527B, #FF6A3A);
+  box-shadow: 5px 10px 25px rgba(255, 106, 58, 0.4);
+  cursor: pointer;
 }
 
 @media (min-width: 700px) and (max-width: 950px) {
