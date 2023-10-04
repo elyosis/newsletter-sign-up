@@ -7,12 +7,12 @@ import styles from "./CallToAction.module.css";
 const CallToAction = (props) => {
   const {onSubmit} = props;
   return (
-    <>
+    <div className={styles["sign-up"]}>
       <Image
         mobileImg="src/assets/images/illustration-sign-up-mobile.svg"
         desktopImg="src/assets/images/illustration-sign-up-desktop.svg"
       />
-      <div className={styles["sign-up"]}>
+      <div className={styles["sign-up__text"]}>
         <Heading title="Stay updated!" />
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <div className={styles["sign-up__list-items"]}>
@@ -22,7 +22,7 @@ const CallToAction = (props) => {
         </div>
         <CTAForm onSubmit={onSubmit} />
       </div>
-    </>
+    </div>
   );
 };
 

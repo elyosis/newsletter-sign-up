@@ -1,4 +1,13 @@
 .sign-up {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "image"
+    "text";
+  gap: 1rem;
+}
+
+.sign-up__text {
   grid-area: text;
   padding: 1rem 1.5rem;
 }
@@ -12,7 +21,12 @@
 
 @media (min-width: 700px) {
   .sign-up {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "text image";
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(40rem, 80vw, 57.5rem);
     font-size: clamp(0.9rem, 1.5vw, 1rem);
-    padding-inline: 2rem;
   }
 }
