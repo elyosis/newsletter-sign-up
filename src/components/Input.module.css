@@ -15,6 +15,14 @@
   opacity: 0.7;
 }
 
+.sign-up__input:hover,
+.sign-up__input:focus {
+  border: 1px solid black;
+  outline: 1px;
+  opacity: 1;
+  cursor: pointer;
+}
+
 @media (min-width: 700px) and (max-width: 950px) {
   .sign-up__input {
     padding: 0.25rem;
