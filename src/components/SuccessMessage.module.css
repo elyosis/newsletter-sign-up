@@ -1,6 +1,6 @@
 .sign-up--success {
   padding: 9rem 1.5rem 1.5rem 1.5rem;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,4 +8,13 @@
 
 .sign-up__email {
   font-weight: bold;
+}
+
+@media (min-width: 700px) {
+  .sign-up--success {
+    padding: 1.5rem 2rem;
+    max-width: 450px;
+    height: fit-content;
+    gap: 1.5rem;
+  }
 }
