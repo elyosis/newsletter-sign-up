@@ -5,7 +5,7 @@ import CTAForm from "./CTAForm";
 import styles from "./CallToAction.module.css";
 
 const CallToAction = (props) => {
-  const {onSubmit} = props;
+  const {email, onInput, onSubmit} = props;
   return (
     <div className={styles["sign-up"]}>
       <Image
@@ -20,7 +20,7 @@ const CallToAction = (props) => {
           <ListItem text="Measuring to ensure updates are a success" />
           <ListItem text="And much more!" />
         </div>
-        <CTAForm onSubmit={onSubmit} />
+        <CTAForm email={email} onInput={onInput} onSubmit={onSubmit} />
       </div>
     </div>
   );
