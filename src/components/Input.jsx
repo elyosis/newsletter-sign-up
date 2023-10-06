@@ -1,11 +1,19 @@
 import styles from "./Input.module.css";
 
 const Input = (props) => {
-  const {email, onInput} = props;
+  const { email, emailIsValid, attemptedSubmit, onInput } = props;
+  const classes = `${styles["sign-up__label"]} ${
+    !emailIsValid && attemptedSubmit ? styles["sign-up__error"] : styles["sign-up__error--initial"]
+  }`;
 
   return (
     <>
-      <label htmlFor="email" className={styles["sign-up__label"]}>Email address</label>
+      <div className={styles["sign-up__messages"]}>
+        <label htmlFor="email" className={styles["sign-up__label"]}>
+          Email address
+        </label>
+        <span className={classes}>Valid email required</span>
+      </div>
 
       <input
         type="email"

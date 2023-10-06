@@ -1,7 +1,21 @@
+.sign-up__messages {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sign-up__label {
   font-size: 0.75rem;
   font-weight: bold;
   color: var(--color-neutral-1);
+}
+
+.sign-up__error--initial {
+  display: none;
+}
+
+.sign-up__error {
+  display: block;
+  color: var(--color-primary);
 }
 
 .sign-up__input {
