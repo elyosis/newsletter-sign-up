@@ -7,14 +7,12 @@ import SuccessMessage from "./components/SuccessMessage";
 function App() {
   // State variables
   const [email, setEmail] = useState("");
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Validation variables
-  const fieldIsEmpty = email.trim() === "";
   const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  const formatIsValid = email.match(emailFormat);
-
-  const emailIsValid = !fieldIsEmpty && formatIsValid;
+  const emailIsValid = Array.isArray(email.match(emailFormat));
 
   // Event handlers
   const inputHandler = (event) => {
@@ -24,15 +22,18 @@ function App() {
   const buttonHandler = () => {
     if (isSubmitted) {
       setEmail("");
+      setAttemptedSubmit(false);
       setIsSubmitted(false);
       return;
     }
 
     if (emailIsValid) {
       setIsSubmitted(true);
-    } else {
       return;
     }
+
+    setAttemptedSubmit(true);
+    return;
   };
 
   return (
@@ -40,6 +41,8 @@ function App() {
       {!isSubmitted ? (
         <CallToAction
           email={email}
+          emailIsValid={emailIsValid}
+          attemptedSubmit={attemptedSubmit}
           onInput={inputHandler}
           onSubmit={buttonHandler}
         />
