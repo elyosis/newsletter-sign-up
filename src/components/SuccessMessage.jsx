@@ -7,7 +7,7 @@ const SuccessMessage = (props) => {
   return (
     <div className={styles["sign-up--success"]}>
       <div className={styles["sign-up__text--success"]}>
-        <img src="src/assets/images/icon-success.svg" />
+        <img src="images/icon-success.svg" />
         <Heading title="Thanks for subscribing!" />
         <p>
           A confirmation email has been sent to{" "}

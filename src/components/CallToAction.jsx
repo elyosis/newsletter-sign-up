@@ -9,8 +9,8 @@ const CallToAction = (props) => {
   return (
     <div className={styles["sign-up"]}>
       <Image
-        mobileImg="src/assets/images/illustration-sign-up-mobile.svg"
-        desktopImg="src/assets/images/illustration-sign-up-desktop.svg"
+        mobileImg="/images/illustration-sign-up-mobile.svg"
+        desktopImg="/images/illustration-sign-up-desktop.svg"
       />
       <div className={styles["sign-up__text"]}>
         <Heading title="Stay updated!" />

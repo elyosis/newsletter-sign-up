@@ -5,7 +5,7 @@ const ListItem = (props) => {
 
   return (
     <div className={styles["sign-up__list-item"]}>
-    <img src="src/assets/images/icon-list.svg" />
+    <img src="/images/icon-list.svg" />
     <p>{text}</p>
     </div>
   )
